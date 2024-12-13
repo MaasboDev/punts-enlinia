@@ -1,4 +1,4 @@
-# [Punts Enlínia]
+# Punts Enlínia
 =====================================
 
 ## Description
