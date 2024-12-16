@@ -85,6 +85,13 @@ dependencies {
     implementation(libs.firebase.remote.config)
     implementation(libs.firebase.crashlytics)
 
+    implementation(project.dependencies.platform(libs.koin.bom))
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.compose.navigation)
+    implementation(libs.koin.compose.viewmodel)
+    implementation(libs.koin.core)
+
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
