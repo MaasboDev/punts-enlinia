@@ -11,10 +11,12 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.ktlint)
+    alias(libs.plugins.kover)
     alias(libs.plugins.detekt)
 }
 
 subprojects {
+    apply(plugin = "org.jetbrains.kotlinx.kover")
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
     apply(plugin = "io.gitlab.arturbosch.detekt")
 

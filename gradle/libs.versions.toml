@@ -12,6 +12,7 @@ jetbrainsKotlinJvm = "2.0.0"
 koin-bom = "3.5.0"
 kotlin = "2.0.20"
 ksp = "2.0.20-1.0.25"
+ktlint = "12.1.1"
 lifecycleRuntimeKtx = "2.8.7"
 
 androidJunitVersion = "1.2.1"
@@ -20,6 +21,7 @@ junit = "4.13.2"
 junit5 = "5.11.3"
 kluent = "1.73"
 kotest = "5.9.1"
+kover = "0.8.3"
 mockk = "1.13.13"
 
 [libraries]
@@ -62,6 +64,7 @@ google-services = { id = "com.google.gms.google-services", version.ref = "google
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "12.1.1" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
