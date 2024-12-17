@@ -2,11 +2,11 @@
 activityCompose = "1.9.3"
 agp = "8.7.3"
 composeBom = "2024.12.01"
-coreKtx = "1.15.0"
+coreKtx = "1.13.1"
 coroutines = "1.9.0"
 crashlytics = "3.0.2"
 detekt = "1.23.7"
-firebaseBom = "33.4.1"
+firebaseBom = "33.4.0"
 googleServices = "4.4.2"
 jetbrainsKotlinJvm = "2.0.0"
 koin-bom = "3.5.0"
@@ -17,6 +17,7 @@ lifecycleRuntimeKtx = "2.8.7"
 androidJunitVersion = "1.2.1"
 espressoCore = "3.6.1"
 junit = "4.13.2"
+junit5 = "5.11.3"
 kluent = "1.73"
 kotest = "5.9.1"
 mockk = "1.13.13"
@@ -31,24 +32,23 @@ androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-firebase-bom = { module = "com.google.firebase:firebase-bom", version = "firebasebom" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 firebase-remote-config = { module = "com.google.firebase:firebase-config" }
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 koin-android = { module = "io.insert-koin:koin-android" }
 koin-compose = { module = "io.insert-koin:koin-compose" }
-koin-compose-navigation = { module = "io.insert-koin:koin-compose-viewmodel-navigation" }
-koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
 koin-core = { module = "io.insert-koin:koin-core" }
 
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidJunitVersion" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
-junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit" }
-junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit" }
-junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit" }
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit5" }
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit5" }
+junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit5" }
+junit-jupiter-vintage-engine = { group = "org.junit.vintage", name = "junit-vintage-engine", version.ref = "junit5" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 kluent = { group = "org.amshove.kluent", name = "kluent", version.ref = "kluent" }
 kotest = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
