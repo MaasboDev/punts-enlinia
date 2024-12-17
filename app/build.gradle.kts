@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.google.services)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kover)
     alias(libs.plugins.crashlytics)
     alias(libs.plugins.detekt)
 }
@@ -98,6 +99,11 @@ dependencies {
 
     implementation(libs.junit.jupiter.api)
 
+    /*
+    kover(projects.core.designSystem)
+    kover(projects.feature.mediaPlayer.impl)
+     */
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -105,6 +111,24 @@ dependencies {
 
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+
+kover {
+    reports {
+        filters {
+            excludes {
+                androidGeneratedClasses()
+                classes(
+                    "dagger.hilt.internal.aggregatedroot.codegen.*",
+                    "*_HiltModules",
+                    "*_Factory",
+                    "*_Impl",
+                    "Hilt_*",
+                    "*GeneratedInjector",
+                )
+            }
+        }
+    }
 }
 
 tasks.named("preBuild")
