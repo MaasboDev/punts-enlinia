@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Punts Enlinia"
 include(":app")
 include(":core:testing")
+include(":core:design-system")
