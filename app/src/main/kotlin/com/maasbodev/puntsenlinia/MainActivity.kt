@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.maasbodev.puntsenlinia.ui.theme.PuntsEnliniaTheme
+import com.maasbodev.puntsenlinea.designsystem.theme.PuntsEnliniaTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

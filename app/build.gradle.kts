@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.services)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kover)
     alias(libs.plugins.crashlytics)
     alias(libs.plugins.detekt)
@@ -33,7 +33,6 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "0.0.1.0" // MAJOR.MINOR.PATCH.BUILD
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -78,14 +77,17 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:design-system"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.bundles.compose)
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
@@ -99,18 +101,18 @@ dependencies {
 
     implementation(libs.junit.jupiter.api)
 
-    /*
-    kover(projects.core.designSystem)
-    kover(projects.feature.mediaPlayer.impl)
+    kover(project(":core:design-system"))
+    /*kover(projects.feature.mediaPlayer.impl)
      */
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
 
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    debugImplementation(libs.bundles.compose.debug)
 }
 
 kover {
