@@ -19,7 +19,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Punts Enlinia"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+rootProject.name = "PuntsEnlinia"
 include(":app")
 include(":core:testing")
 include(":core:design-system")
