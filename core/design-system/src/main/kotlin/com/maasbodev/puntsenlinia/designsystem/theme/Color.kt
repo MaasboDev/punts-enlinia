@@ -1,4 +1,4 @@
-package com.maasbodev.puntsenlinea.designsystem.theme
+package com.maasbodev.puntsenlinia.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

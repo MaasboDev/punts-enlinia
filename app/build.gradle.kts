@@ -77,8 +77,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:design-system"))
-
+    implementation(projects.core.designSystem)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -88,6 +87,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.bundles.compose)
+    implementation(libs.splashscreen)
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
@@ -101,9 +101,7 @@ dependencies {
 
     implementation(libs.junit.jupiter.api)
 
-    kover(project(":core:design-system"))
-    /*kover(projects.feature.mediaPlayer.impl)
-     */
+    kover(projects.core.designSystem)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
