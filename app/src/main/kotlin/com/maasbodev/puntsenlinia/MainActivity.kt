@@ -11,11 +11,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.maasbodev.puntsenlinea.designsystem.theme.PuntsEnliniaTheme
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.maasbodev.puntsenlinia.designsystem.theme.PuntsEnliniaTheme
 
 class MainActivity : ComponentActivity() {
+    private val viewModel = MainViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen().setKeepOnScreenCondition {
+            viewModel.isLoading.value
+        }
         enableEdgeToEdge()
         setContent {
             PuntsEnliniaTheme {
