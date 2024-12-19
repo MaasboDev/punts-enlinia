@@ -77,7 +77,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:design-system"))
+    implementation(projects.core.designSystem)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
