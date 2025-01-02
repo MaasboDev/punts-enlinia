@@ -24,3 +24,4 @@ rootProject.name = "PuntsEnlinia"
 include(":app")
 include(":core:testing")
 include(":core:design-system")
+include(":core:string-resources")
