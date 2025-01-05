@@ -1,4 +1,11 @@
 [versions]
+javaVersion = "21"
+compileSdk = "35"
+targetSdk = "35"
+minSdk = "24"
+versionCode = "1"
+versionName = "0.0.1.0"
+
 activityCompose = "1.9.3"
 agp = "8.7.3"
 composeBom = "2024.12.01"
@@ -49,6 +56,10 @@ koin-compose = { module = "io.insert-koin:koin-compose" }
 koin-core = { module = "io.insert-koin:koin-core" }
 splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
 
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidJunitVersion" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
@@ -92,3 +103,5 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+
+convention-android-application = { id = "com.maasbodev.puntsenlinia.buildlogic.convention.android-application" }
